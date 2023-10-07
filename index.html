@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-datos">
+        <!-- Título en negrita h2 -->
+        <h2>Form Datos</h2>
+        <!-- Creación del label -->
+        <label>Filtrar por:</label>
+        <!-- Creación del selector con el id filtro, para poder hallarlo después en en JavaScript -->
+        <select id="filtro">
+          <option value="Todos">Todos</option>
+          <option value="Terrestre">Terrestre</option>
+          <option value="Aereo">Aereo</option>
+        </select>
+        <br />
+        <label for="calcular-velocidad">Calcular Velocidad Promedio:</label>
+        <!-- Crea un cuadro de texto y lo pone bajo el id velocidad-input -->
+        <input type="text" id="velocidad-input" />
+        <!-- Creación del botón datos bajo el id calcular-velocidad-button -->
+        <button id="calcular-velocidad-button">Calcular</button>
+       <!-- Creación de los checkbox y los label asociados a ellos.
+        En este punto se les pone checked para indicar que están seleccionados como verdaderos. --> 
+        <div class="mostrar-columnas">
+            <input type="checkbox" id="col-id" checked />
+            <label for="col-id">Id</label>
+          
+            <input type="checkbox" id="col-modelo" checked />
+            <label for="col-modelo">Modelo</label>
+          
+            <input type="checkbox" id="col-anio-fabri" checked />
+            <label for="col-anio-fabri">Año Fabri</label>
+          
+            <input type="checkbox" id="col-vel-max" checked />
+            <label for="col-vel-max">Vel Max</label>
+          
+            <input type="checkbox" id="col-alt-max" checked />
+            <label for="col-alt-max">Alt Max</label>
+          
+            <input type="checkbox" id="col-autonomia" checked />
+            <label for="col-autonomia">Autonomia</label>
+          
+            <input type="checkbox" id="col-cant-pue" checked />
+            <label for="col-cant-pue">Cant Pue</label>
+          
+            <input type="checkbox" id="col-cant-rue" checked />
+            <label for="col-cant-rue">Cant Rue</label>
+        </div>
+           <!-- Creación del botón "Agregar". Este se implementa para formar
+        el formulario ABM. -->
+      <button id="boton-agregar">Agregar</button>
+
+      <table border="1" id="tabla-datos">
+        <thead>
+          <tr>
+            <th id="col-id">Id</th>
+            <th id="col-modelo">Modelo</th>
+            <th id="col-anio-fabri">Año Fabri</th>
+            <th id="col-vel-max">Vel Max</th>
+            <th id="col-alt-max">Alt Max</th>
+            <th id="col-autonomia">Autonomia</th>
+            <th id="col-cant-pue">Cant Pue</th>
+            <th id="col-cant-rue">Cant Rue</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-datos-body"></tbody>
+      </table>
+    </div>
+    <div class="form-abm" hidden>
+      <h2>Formulario ABM</h2>
+      
+      <label for="col-id">Id:</label>
+      <input type="text" id="col-id" disabled="true" />
+      <br>
+  
+      <label for="col-modelo">Modelo:</label>
+      <input type="text" id="col-modelo" />
+      <br>
+  
+      <label for="col-anio-fabri">Año Fabri:</label>
+      <input type="number" id="col-anio-fabri" />
+      <br>
+  
+      <label for="col-vel-max">Vel Max:</label>
+      <input type="number" id="col-vel-max" />
+      <br>
+  
+      <label for="col-alt-max">Alt Max:</label>
+      <input type="number" id="col-alt-max" />
+      <br>
+  
+      <label for="col-autonomia">Autonomia:</label>
+      <input type="number" id="col-autonomia" />
+      <br>
+  
+      <label for="col-cant-pue">Cant Pue:</label>
+      <input type="number" id="col-cant-pue" />
+      <br>
+  
+      <label for="col-cant-rue">Cant Rue:</label>
+      <input type="number" id="col-cant-rue" />
+      <br>
+  
+      <label for="tipo">Tipo:</label>
+      <select id="tipo">
+          <option value="Terrestre">Terrestre</option>
+          <option value="Aereo">Aereo</option>
+          <option value="Otro">Otro</option>
+      </select>
+      <br>
+  
+      <button id="agregar">Agregar</button>
+      <button id="modificar">Modificar</button>
+      <button id="eliminar">Eliminar</button>
+      <button id="cancelar">Cancelar</button>
+  </div>
+  
+      <script type="module" src="js/scripts.js"></script>
+
+
+</body>
+</html>
